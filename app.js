@@ -27,6 +27,7 @@ app.get('/components', routes.components);
 app.get('/lifestyle', routes.lifestyle);
 app.get('/aboutus', routes.aboutus);
 app.get('/dealers', routes.dealers);
+app.post('/signup', routes.signup);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

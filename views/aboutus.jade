@@ -16,4 +16,50 @@ block content
 			.col-12.footerAboutUs
 				div.dromicon
 				p DROM Ride | Bike Components Quality Lifestyle
-		.row.complexFooter
+		div.complexFooter
+			.row
+				.col-md-3.sickabox
+					div.newsletter
+						p NEWSLETTER&nbsp;
+					div.goldbox.box
+						p BOX
+				.col-md-3.sickabox
+					div.share
+						p SHARE&nbsp;
+					div.goldbox.withus
+						p WITH US
+				.col-md-3.sickabox
+					div.how
+						p HOW&nbsp;
+					div.goldbox.wedoit
+						p WE DO IT
+				.col-md-3.sickabox
+					div.who
+						p WHO&nbsp;
+					div.goldbox.weare
+						p WE ARE
+			.row
+				.col-md-4.futurabox
+					form(action='/signup',method='post').signupbox
+						div(data-role='fieldcontain')
+							fieldset(data-role='controlgroup')
+								input(id='email',type='text',value='',placeholder='EMAIL SIGN UP',name='email').emailfieldbox
+						div(data-role='fieldcontain')
+							input(type='submit',value='Go',data-transition='fade', data-theme='c').gobutton  
+				.col-md-3.futurabox.iconbox
+					div.ico.twit.topleft
+					div.ico.fb.topright
+					div.ico.insta.bottomleft
+					div.ico.tumb.bottomright
+				.col-md-3.futurabox
+					p CONTACT US
+					p RIDERS SERVICE
+					p WARRANTY
+					p PRIVACY POLICY
+					p RETURN POLICY
+				.col-md-2.futurabox
+					p DROM
+					p 113 st,
+					p Dragalevtzi district,
+					p Municipality of Vitosha
+					p Sofia, Bulgaria

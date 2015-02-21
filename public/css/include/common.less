@@ -170,6 +170,69 @@ body {
   height: 270px;
   background-color: RGBA(0,0,0,.4);
   border-top: 1px solid @goldLife;
+  padding: 47px 0px 0px 20px;
+  letter-spacing: 1px;
+  .goldbox {
+    &>p {
+      color: @navFontColor;
+      background-color: @goldLife;
+    }
+  }
+  .sickabox {
+    font-family: 'sickamoreregular';
+    font-size: 24px;
+    color: @navBackColor;
+    display: inline-flex;
+    .newsletter {
+      padding-left: 30px;
+    }
+  }
+  .futurabox {
+    padding-top: 25px;
+    font-family: 'FuturaEF-DemiBold';
+    font-size: 15px;
+    color: @navBackColor;
+    &>p {
+      margin: 0 0 5px;
+    }
+    .signupbox {
+      display: inline-flex;
+      font-size: 14px;
+      .emailfieldbox {
+        width: 185px;
+        height: 30px;
+        border: none;
+        background-color: @navFontColor;
+        color: @greyBackground;
+        padding-left: 15px;
+        letter-spacing: 1px;
+      }
+      .gobutton {
+        width: 54px;
+        height: 30px;
+        background-color: @goldLife;
+        color: @navFontColor;
+        border: none;
+      }
+    }
+    .topleft {
+      position: relative;
+      top: 3px;    }
+    .topright {
+      position: relative;
+      top: -45px;
+      left: 75px;
+    }
+    .bottomleft {
+      position: relative;
+      top: -28px;
+    }
+    .bottomright {
+      position: relative;
+      top: -76px;
+      left: 75px;
+    }
+  }
 }
 
 // NAVBAR
