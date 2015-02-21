@@ -1,0 +1,16 @@
+doctype html
+html
+	head
+		title Drom
+		link(rel='stylesheet', href='/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/css/style.css')
+		body(data-spy="scroll", data-target="#navbar")
+			include include/navbar
+			.container(style='padding-left:0px')
+				block content
+				script(type="text/javascript").
+					var less=less||{};less.env='development';
+				script(src="/js/lib/jquery.js")
+				script(src="/js/lib/bootstrap.min.js")
+				//- script(src="/js/lib/retina.min.js")
+				include include/footer
