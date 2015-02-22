@@ -6,7 +6,7 @@ var express = require('express'),
 var app = express();
 
 app.configure(function(){
-  app.set('port', process.env.PORT || 3000);
+  app.set('port', process.env.PORT || 3002);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.favicon());
@@ -15,7 +15,7 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(app.router);
   app.use(require('less-middleware')(__dirname + '/public'));
-  app.use(express.static(path.join(__dirname, 'public')));
+  //app.use(express.static(path.join(__dirname, 'public')));
 });
 
 app.configure('development', function(){
