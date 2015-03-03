@@ -2,7 +2,9 @@ doctype html
 html
 	head
 		title Drom
-		link(rel='stylesheet', href='/css/bootstrap.min.css')
+		<!-- Latest compiled and minified CSS -->
+		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
+		//- link(rel='stylesheet', href='/css/bootstrap.min.css')
 		link(rel='stylesheet', href='/css/style.css')
 	body(data-spy="scroll", data-target="#navbar")
 		include include/navbar
@@ -12,6 +14,7 @@ html
 		script(type="text/javascript").
 			var less=less||{};less.env='development';
 		script(src="/js/lib/jquery.js")
-		script(src="/js/lib/bootstrap.min.js")
+		script(src="/js/lib/bootstrap.js")
+		script(src="/js/carousel.js")
 		//- script(src="/js/lib/retina.min.js")
 				
