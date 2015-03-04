@@ -109,3 +109,7 @@ $(document).ready(function() {
         new Carousel(carousels[i]);
     }
 });
+
+// $('#carousel-aboutus-1').carousel({
+//   interval: 4000
+// })

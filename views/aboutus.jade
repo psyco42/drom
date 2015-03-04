@@ -3,15 +3,14 @@ extends layout
 block content
 	.container.commonPanel
 		.row
-			//- - var pics = ['/images/aboutus/slide_pictures/1.png', '/images/aboutus/slide_pictures/2.png', '/images/aboutus/slide_pictures/3.png','/images/aboutus/slide_pictures/4.png','/images/aboutus/slide_pictures/5.png']
 			.col-md-8.carouselpanel
-				#carousel-aboutus-1.carousel.slide
+				#carousel-aboutus-1.carousel.slide(data-ride="carousel")
 					ol.carousel-indicators
-						li.active(data-target="#carousel-example-generic", data-slide-to="0")
-						li(data-target="#carousel-example-generic", data-slide-to="1")
-						li(data-target="#carousel-example-generic", data-slide-to="2")
-						li(data-target="#carousel-example-generic", data-slide-to="3")
-						li(data-target="#carousel-example-generic", data-slide-to="4")
+						li.active(data-target="#carousel-aboutus-1", data-slide-to="0")
+						li(data-target="#carousel-aboutus-1", data-slide-to="1")
+						li(data-target="#carousel-aboutus-1", data-slide-to="2")
+						li(data-target="#carousel-aboutus-1", data-slide-to="3")
+						li(data-target="#carousel-aboutus-1", data-slide-to="4")
 					.carousel-inner(role="listbox")
 			.col-md-4.sub.insidesvg.rowSVG
 		.row
