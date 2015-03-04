@@ -9,9 +9,25 @@ var carousels = [{
 }, {
     id: 'carousel-components-2',
     pics: [
-        '/images/COMPONENTS/spacer1.png',
-        '/images/COMPONENTS/eclipse.png',
-        '/images/COMPONENTS/space_red.png'
+        '/images/COMPONENTS/armira1.png',
+        '/images/COMPONENTS/armira2.png',
+        '/images/COMPONENTS/armira3.png'
+    ]
+}, {
+    id: 'carousel-components-3',
+    pics: [
+        '/images/COMPONENTS/seatclamp1.png',
+        '/images/COMPONENTS/blue.png',
+        '/images/COMPONENTS/black.png',
+        '/images/COMPONENTS/red.png'
+    ]
+}, {
+    id: 'carousel-components-4',
+    pics: [
+        '/images/COMPONENTS/stem.png',
+        '/images/COMPONENTS/angle.png',
+        '/images/COMPONENTS/right.png',
+        '/images/COMPONENTS/top.png'
     ]
 }, {
     id: 'carousel-aboutus-1',

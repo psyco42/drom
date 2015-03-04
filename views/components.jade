@@ -37,31 +37,14 @@ block content
                         li(data-target="#carousel-example-generic", data-slide-to="1")
                         li(data-target="#carousel-example-generic", data-slide-to="2")
                     .carousel-inner(role="listbox")
-                        //- - for (var i = 0, l = pics.length; i < l; i++)
-                            - if (i === 1)
-                                .item.active(style="background-image:url(#{pics[i]})")
-                            - else
-                                .item(style="background-image:url(#{pics[i]})")
-                                //- .carousel-caption nfkslfnkds fdsnklfndsklfds f dkslfs
-
                     a.left.carousel-control(href="#carousel-components-1", role="button", data-slide="prev")
                         span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
                         span.sr-only Previous
                     a.right.carousel-control(href="#carousel-components-1", role="button", data-slide="next")
                         span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
                         span.sr-only Next
-
                 .carousellink WATCH REVIEW
-
                 .thumbnails.row-fluid
-                    //- - for (var i = 0, l = pics.length; i < l; i++)
-                    //-     - if (i === 1)
-                    //-         .col-md-4.active(style="background-image:url(#{pics[i]})")
-                    //-     - else
-                    //-         .col-md-4(style="background-image:url(#{pics[i]})")
-                    //- .col-md-4(style="background-image:url(/images/COMPONENTS/spacer1.png)")
-                    //- .col-md-4.active(style="background-image:url(/images/COMPONENTS/eclipse.png)")
-                    //- .col-md-4(style="background-image:url(/images/COMPONENTS/space_red.png)")
 
         .row#AMIRA
             .col-md-4.smallpanel.spacerPictTxt
@@ -97,7 +80,18 @@ block content
                         p Rap gold
                         p Weight:  11g (avg)
                     a.btn.btn-default.drombtn.whtbtn.transpabgbtn.btnCenter.nav-link(href='/dealers#') WHERE TO BUY
-            .col-md-6.bigpanel.armira1Pict
+            //- .col-md-6.bigpanel.armira1Pict
+            .col-md-6.carouselpanel
+                #carousel-components-2.carousel.slide
+                    .carousel-inner(role="listbox")
+                    a.left.carousel-control(href="#carousel-components-2", role="button", data-slide="prev")
+                        span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+                        span.sr-only Previous
+                    a.right.carousel-control(href="#carousel-components-2", role="button", data-slide="next")
+                        span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+                        span.sr-only Next
+                .carousellink WATCH REVIEW
+                .thumbnails.row-fluid
         .row
             .col-md-4.smallpanel.eyesPictTxt
             .col-md-8.smallpanel.whiteBG
@@ -139,7 +133,18 @@ block content
                         p Rap gold
                         p Weight: 22g (avg assembled weight)
                     a.btn.btn-default.drombtn.whtbtn.transpabgbtn.btnCenter.nav-link(href='/aboutus#') CONTACT US
-            .col-md-6.bigpanel.seatclamp1Pict
+            //- .col-md-6.bigpanel.seatclamp1Pict
+            .col-md-6.carouselpanel
+                #carousel-components-3.carousel.slide
+                    .carousel-inner(role="listbox")
+                    a.left.carousel-control(href="#carousel-components-3", role="button", data-slide="prev")
+                        span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+                        span.sr-only Previous
+                    a.right.carousel-control(href="#carousel-components-3", role="button", data-slide="next")
+                        span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+                        span.sr-only Next
+                //- .carousellink WATCH REVIEW
+                .thumbnails.row-fluid
         .row
             .col-md-4.smallpanel.clampPictTxt
             .col-md-8.smallpanel.whiteBG
@@ -177,7 +182,18 @@ block content
                         p Minimal grey, King red, Deep blue, Rap gold
                         p Weight: about 140g
                     a.btn.btn-default.drombtn.whtbtn.transpabgbtn.btnCenter.nav-link(href='/aboutus#') CONTACT US
-            .col-md-6.bigpanel.stem1PictTxt
+            //- .col-md-6.bigpanel.stem1PictTxt
+            .col-md-6.carouselpanel
+                #carousel-components-4.carousel.slide
+                    .carousel-inner(role="listbox")
+                    a.left.carousel-control(href="#carousel-components-4", role="button", data-slide="prev")
+                        span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+                        span.sr-only Previous
+                    a.right.carousel-control(href="#carousel-components-4", role="button", data-slide="next")
+                        span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+                        span.sr-only Next
+                //- .carousellink WATCH REVIEW
+                .thumbnails.row-fluid
         .row
             .col-md-4.smallpanel.bikestemPictTxt
             .col-md-8.smallpanel.whiteBG
