@@ -13,6 +13,15 @@ var carousels = [{
         '/images/COMPONENTS/eclipse.png',
         '/images/COMPONENTS/space_red.png'
     ]
+}, {
+    id: 'carousel-aboutus-1',
+    pics: [
+        '/images/aboutus/slide_pictures/1.jpg',
+        '/images/aboutus/slide_pictures/2.jpg',
+        '/images/aboutus/slide_pictures/3.jpg',
+        '/images/aboutus/slide_pictures/4.jpg',
+        '/images/aboutus/slide_pictures/5.jpg'
+    ]
 }];
 
 function Carousel(config) {
