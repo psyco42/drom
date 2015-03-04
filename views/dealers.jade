@@ -1,53 +1,90 @@
 extends layout
 
 block content
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo9mkfJzSuC2s2XCBs2TKyojn_SJW7rpU")
+	script(type='text/javascript').
+		function initialize() {
+			var mapOptions = {
+				center: { lat: 42.677258, lng: 23.332899},
+				zoom: 17
+			};
+			var styles = [
+				  {
+				    featureType: "all",
+				    stylers: [
+				      { saturation: -100 }
+				    ]
+				  }
+				  //- ,{
+				  //-   featureType: "road.arterial",
+				  //-   elementType: "geometry",
+				  //-   stylers: [
+				  //-     { hue: "#00ffee" },
+				  //-     { saturation: 50 }
+				  //-   ]
+				  //- },{
+				  //-   featureType: "poi.business",
+				  //-   elementType: "labels",
+				  //-   stylers: [
+				  //-     { visibility: "off" }
+				  //-   ]
+				  //- }
+				];
+			var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});
+			var map = new google.maps.Map(document.getElementById('map-dealer'),
+			mapOptions);
+			map.mapTypes.set('map_style', styledMap);
+			map.setMapTypeId('map_style');
+			var bikeLayer = new google.maps.BicyclingLayer();
+			bikeLayer.setMap(map);
+			var marker = new google.maps.Marker({
+			    position: { lat: 42.677258, lng: 23.332899},
+			    map: map,
+			    icon: "/images/dealers/pin.svg"
+			});
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
 	.container.commonPanel
 		.row
 			.col-md-12.bgmap
 		.row
 			.col-md-12.bannerdealer
 				div.logodealers
-		//- #myCarousel.carousel.slide(data-ride='carousel')
-		//- 	// Indicators
-		//- 	ol.carousel-indicators
-		//- 		li.active(data-target='#myCarousel', data-slide-to='0')
-		//- 		li(data-target='#myCarousel', data-slide-to='1')
-		//- 		li(data-target='#myCarousel', data-slide-to='2')
-		//- 	.carousel-inner
-		//- 		.item.active
-		//- 			img(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='First slide')
-		//- 			.container
-		//- 				.carousel-caption
-		//- 					h1 Example headline.
-		//- 					p
-		//- 						| Note: If you&apos;re viewing this page via a 
-		//- 						code file://
-		//- 						|  URL, the &quot;next&quot; and &quot;previous&quot; Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.
-		//- 					p
-		//- 					a.btn.btn-lg.btn-primary(href='#', role='button') Sign up today
-		//- 		.item
-		//- 			img(src='data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Second slide')
-		//- 			.container
-		//- 				.carousel-caption
-		//- 					h1 Another example headline.
-		//- 					p
-		//- 						| Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-		//- 					p
-		//- 					a.btn.btn-lg.btn-primary(href='#', role='button') Learn more
-		//- 		.item
-		//- 			img(src='data:image/gif;base64,R0lGODlhAQABAIAAAFVVVQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Third slide')
-		//- 			.container
-		//- 				.carousel-caption
-		//- 					h1 One more for good measure.
-		//- 					p
-		//- 						| Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-		//- 					p
-		//- 						a.btn.btn-lg.btn-primary(href='#', role='button') Browse gallery
-		//- 		a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
-		//- 			span.glyphicon.glyphicon-chevron-left
-		//- 		a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
-		//- 			span.glyphicon.glyphicon-chevron-right
-		.row.carddealers
+		.row.dealerheaders.maskdealer
+			.col-md-6
+				p Address / Country / Phone
+			.col-md-6
+				p Map
+		.row.maskdealer
+			.col-md-4
+				div.dealerbox
+					div.dealerstitle
+						p Sportcom
+					div.dealertext
+						p Lozonets, Hristo Smirnenski 74A
+						p Sofia 1164
+						p Bulgaria
+					div.dealerstel
+						p +359 886 722615	
+				div.dealerbox
+					div.dealerstitle
+						p Sportcom
+					div.dealertext
+						p Lozonets, Hristo Smirnenski 74A
+						p Sofia 1164
+						p Bulgaria
+					div.dealerstel
+						p +359 886 722615	
+			.col-md-8
+				//- div.maskmap
+				//- 	div.maskmap2
+				div#map-dealer
+		.row.maskdealer
+			div.newdealerbox
+				div.newdealertitle
+					p Become an authorized Drom dealer
+				div.newdealertext
+					p Our goal to create a solid network of dealers worldwide can only happens with the right partners. If you would like to get involve we invite you to contact us for more information.
 		.row
 			.col-md-12
 			div.complexFooter

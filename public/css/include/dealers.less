@@ -13,7 +13,80 @@
 	left: 620px;
 	background: url(/images/dealers/dealers.svg) no-repeat scroll 0px 0px transparent;
 }
-.carddealers {
-	height: 440px;
+.maskdealer {
+	background-color: RGBA(51,51,51,.7);
+}
+.dealerheaders {
+	text-align: center;
+	height: 40px;
+	border: 1px solid @navFontColor;
+	color: @navFontColor;
+	font-family: 'FuturaEF-DemiBold';
+	font-size: 18px;
+	padding-top: 7px;
+}
+
+.dealerbox{
+	width: 300px;
+	font-family: 'Gibson-Light';
+	color: @goldLife;
+	font-size: 21px;
+	margin-left: 20px;
+	border-bottom: 1px solid @goldLife;;
+	.dealerstitle {
+		font-size: 36px;
+		&>p {
+		margin-bottom: -5px;
+		}
+	}
+	.dealerstel {
+		font-size: 32px;
+		&>p {
+		margin-bottom: 20px;
+		}
+	}
+	.dealertext {
+		&>p {
+		margin-bottom: 0px;
+		}
+	}
+}
+
+.newdealerbox {
+	margin: 20px 0px 40px 35px;
+	width: 650px;
+	letter-spacing: 1px;
+	.newdealertitle {
+		font-family: 'FuturaEF-DemiBold';
+		font-size: 21px;
+		color: @redFontColor;
+	}
+	.newdealertext {
+		font-family: 'Gibson-Light';
+		font-size: 18px;
+		color: @goldLife;
+	}
+}
+
+#map-dealer { 
+	height: 400px; 
+	margin-top: 20px;
+	margin-left: 50px; 
+	padding: 0;
+}
+.maskmap {
+	position: absolute;
+	-webkit-transform: rotate(-8deg);
+	transform: rotate(-8deg);
+	z-index: 42;
+	height: 220px;
+	width: 65px;
+	top:18px;
+	left:0px;
+	background: url(/images/background_picture.jpg)  scroll 0 0 transparent;
+}
+.maskmap2 {
+	height: 220px;
+	width: 65px;
 	background-color: RGBA(51,51,51,.7);
 }
