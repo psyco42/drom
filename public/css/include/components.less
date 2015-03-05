@@ -21,6 +21,9 @@
 	height: 320px;
 	padding-top: 30px;
 	font-size: 18px;
+	&.lessPadTop {
+		padding-top: 20px;
+	}
 }
 .banner {
 	height: 150px;
@@ -71,6 +74,15 @@
 
 .eyesPictTxt {
 	.at2x("/images/components/eyes.png", 320px, 320px);
+	&>p {
+		position: absolute;
+		top: 267px;
+		left:100px;
+		color: @navBackColor;
+		font-family: 'FuturaEF-DemiBold';
+		font-size: 16px;
+		letter-spacing: 1px;
+	}
 }
 
 .armira1Pict {
@@ -90,44 +102,4 @@
 
 .stem1PictTxt {
 	.at2x("/images/components/right.png", 320px, 320px);
-}
-
-.arrow {
-	position: relative;
-	top: -3px;
-	height: 20px;
-	background: url(/SVGs/arrow.svg) no-repeat scroll center transparent;
-}
-
-.carouselpanel {
-	padding: 0;
-	height: 100%;
-	color: white;
-	background-color: black;
-
-	.item {
-		height: 320px;
-		background-position: center;
-		background-size: auto 100%;
-		background-repeat: no-repeat;
-	}
-}
-
-.carousellink {
-	font-size: 14px;
-	padding: 40px 0;
-	text-align: center;
-	// background-color: pink;
-	font-family: 'FuturaEF-DemiBold';
-}
-
-.thumbnails {
-	.col-md-4 {
-		height: 160px;
-		background-size: auto 100%;
-
-		&.active {
-			border: 1px solid red;
-		}
-	}
 }

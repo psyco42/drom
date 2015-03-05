@@ -1,6 +1,7 @@
 // List of all site carousels.
 var carousels = [{
     id: 'carousel-components-1',
+    picSize: '480px 480px',
     pics: [
         '/images/COMPONENTS/spacer1.png',
         '/images/COMPONENTS/eclipse.png',
@@ -8,6 +9,7 @@ var carousels = [{
     ]
 }, {
     id: 'carousel-components-2',
+    picSize: '480px 480px',
     pics: [
         '/images/COMPONENTS/armira1.png',
         '/images/COMPONENTS/armira2.png',
@@ -15,6 +17,7 @@ var carousels = [{
     ]
 }, {
     id: 'carousel-components-3',
+    picSize: '480px 480px',
     pics: [
         '/images/COMPONENTS/seatclamp1.png',
         '/images/COMPONENTS/blue.png',
@@ -23,6 +26,7 @@ var carousels = [{
     ]
 }, {
     id: 'carousel-components-4',
+    picSize: '480px 480px',
     pics: [
         '/images/COMPONENTS/stem.png',
         '/images/COMPONENTS/angle.png',
@@ -31,6 +35,7 @@ var carousels = [{
     ]
 }, {
     id: 'carousel-aboutus-1',
+    picSize: '640px 320px',
     pics: [
         '/images/aboutus/slide_pictures/1.jpg',
         '/images/aboutus/slide_pictures/2.jpg',
@@ -42,34 +47,34 @@ var carousels = [{
 
 function Carousel(config) {
     var inner, thumbnails,
-        index, pics, carousel;
+        index, pics, picSize, carousel;
 
     var createItems = function() {
         var active, items = [];
 
         for (var i = 0, l = pics.length; i < l; i++) {
             active = i === index ? ' active' : '';
-            items.push('<div class="item'+active+'" style="background-image:url('+pics[i]+')"></div>');
+            items.push('<div class="item'+active+'" style="'+picStyleHelper(pics[i])+'"></div>');
         }
 
         inner.append(items.join(''));
     };
 
     var createThumbnails = function() {
-        var active, items = [];
+        var active, items = [], timgSize = '160px 160px';
 
         if (index === 0) {
-            items.push('<div action="prev" class="col-md-4" style="background-image:url('+pics[pics.length-1]+')"></div>');
-            items.push('<div class="col-md-4 active" style="background-image:url('+pics[index]+')"></div>');
-            items.push('<div action="next" class="col-md-4" style="background-image:url('+pics[index+1]+')"></div>');
+            items.push('<div action="prev" class="col-md-4" style="'+picStyleHelper(pics[pics.length-1], timgSize)+'"></div>');
+            items.push('<div class="col-md-4 active" style="'+picStyleHelper(pics[index], timgSize)+'"></div>');
+            items.push('<div action="next" class="col-md-4" style="'+picStyleHelper(pics[index+1], timgSize)+'"></div>');
         } else if (index === pics.length - 1) {
-            items.push('<div action="prev" class="col-md-4" style="background-image:url('+pics[index-1]+')"></div>');
-            items.push('<div class="col-md-4 active" style="background-image:url('+pics[index]+')"></div>');
-            items.push('<div action="next" class="col-md-4" style="background-image:url('+pics[0]+')"></div>');
+            items.push('<div action="prev" class="col-md-4" style="'+picStyleHelper(pics[index-1], timgSize)+'"></div>');
+            items.push('<div class="col-md-4 active" style="'+picStyleHelper(pics[index], timgSize)+'"></div>');
+            items.push('<div action="next" class="col-md-4" style="'+picStyleHelper(pics[0], timgSize)+'"></div>');
         } else {
-            items.push('<div action="prev" class="col-md-4" style="background-image:url('+pics[index-1]+')"></div>');
-            items.push('<div class="col-md-4 active" style="background-image:url('+pics[index]+')"></div>');
-            items.push('<div action="next" class="col-md-4" style="background-image:url('+pics[index+1]+')"></div>');
+            items.push('<div action="prev" class="col-md-4" style="'+picStyleHelper(pics[index-1], timgSize)+'"></div>');
+            items.push('<div class="col-md-4 active" style="'+picStyleHelper(pics[index], timgSize)+'"></div>');
+            items.push('<div action="next" class="col-md-4" style="'+picStyleHelper(pics[index+1], timgSize)+'"></div>');
         }
 
         thumbnails.empty();
@@ -83,11 +88,24 @@ function Carousel(config) {
         });
     };
 
+    var regexMatch = /\.[\w\?=]+$/;
+    function suffixReplace (match) {
+        return '@2x' + match;
+    }
+    var picStyleHelper = function(picUrl, picSizeOpt) {
+        if (window.devicePixelRatio > 1 && (picSize || picSizeOpt)) {
+            return 'background-image:url('+picUrl.replace(regexMatch, suffixReplace)+'); background-size: ' + (picSizeOpt || picSize);
+        } else {
+            return 'background-image:url('+picUrl+')';
+        }
+    };
+
     carousel = $('#' + config.id);
 
     if (carousel.length) {
         index = 0;
         pics = config.pics;
+        picSize = config.picSize;
         inner = $('.carousel-inner', carousel);
         thumbnails = carousel.siblings('.thumbnails');
 

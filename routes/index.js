@@ -8,19 +8,19 @@ exports.index = function(req, res){
 };
 
 exports.components = function(req, res){
-  res.render('components');
+  res.render('components', {selection:'components'});
 };
 
 exports.lifestyle = function(req, res){
-  res.render('lifestyle');
+  res.render('lifestyle', {selection:'lifestyle'});
 };
 
 exports.aboutus = function(req, res){
-  res.render('aboutus');
+  res.render('aboutus', {selection:'aboutus'});
 };
 
 exports.dealers = function(req, res){
-  res.render('dealers');
+  res.render('dealers', {selection:'dealers'});
 };
 
 exports.signup = function(req, res) {
