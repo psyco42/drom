@@ -1,22 +1,36 @@
 // List of all site carousels.
 var carousels = [{
-    id: 'carousel-components-1',
+    id: 'carousel-components-spacer',
     picSize: '480px 480px',
     pics: [
-        '/images/COMPONENTS/spacer1.png',
         '/images/COMPONENTS/eclipse.png',
-        '/images/COMPONENTS/space_red.png'
+        '/images/COMPONENTS/space_black.png',
+        '/images/COMPONENTS/red_art.png',
+        '/images/COMPONENTS/space_red.png',
+        '/images/COMPONENTS/blue_art.png',
+        '/images/COMPONENTS/space_blue.png',
+        '/images/COMPONENTS/gold_art.png',
+        '/images/COMPONENTS/space_gold.png',
+        '/images/COMPONENTS/gray_art.png',
+        '/images/COMPONENTS/space_gray.png'
     ]
 }, {
-    id: 'carousel-components-2',
+    id: 'carousel-components-clamp',
     picSize: '480px 480px',
     pics: [
+        '/images/COMPONENTS/armira_34_31.png',
         '/images/COMPONENTS/armira1.png',
+        '/images/COMPONENTS/armira3.png',
         '/images/COMPONENTS/armira2.png',
-        '/images/COMPONENTS/armira3.png'
+        '/images/COMPONENTS/armira_red1.png',
+        '/images/COMPONENTS/armira_red2.png',
+        '/images/COMPONENTS/armira_blue.png',
+        '/images/COMPONENTS/armira_gold1.png',
+        '/images/COMPONENTS/armira_gold2.png',
+        '/images/COMPONENTS/armira_gray.png'
     ]
 }, {
-    id: 'carousel-components-3',
+    id: 'carousel-components-dhclamp',
     picSize: '480px 480px',
     pics: [
         '/images/COMPONENTS/seatclamp1.png',
@@ -25,7 +39,21 @@ var carousels = [{
         '/images/COMPONENTS/red.png'
     ]
 }, {
-    id: 'carousel-components-4',
+    id: 'carousel-components-stem',
+    picSize: '480px 480px',
+    pics: [
+        '/images/COMPONENTS/stemS1.png',
+        '/images/COMPONENTS/stemS2.png',
+        '/images/COMPONENTS/stemS3.png',
+        '/images/COMPONENTS/stemS4.png',
+        '/images/COMPONENTS/stem_blue.png',
+        '/images/COMPONENTS/stem_red.png',
+        '/images/COMPONENTS/stem_red_blue.png',
+        '/images/COMPONENTS/stem_blue_gray.png',
+        '/images/COMPONENTS/stem_black_gray.png',
+    ]
+}, {
+    id: 'carousel-components-stem35',
     picSize: '480px 480px',
     pics: [
         '/images/COMPONENTS/stem.png',
@@ -34,7 +62,7 @@ var carousels = [{
         '/images/COMPONENTS/top.png'
     ]
 }, {
-    id: 'carousel-aboutus-1',
+    id: 'carousel-aboutus-header',
     picSize: '640px 320px',
     pics: [
         '/images/aboutus/slide_pictures/1.jpg',

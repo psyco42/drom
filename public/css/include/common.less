@@ -1,7 +1,7 @@
 
 @navBackColor: #ffffff;
 @navFontColor: #000000;
-@grayTextColor: #cccccc;
+@grayTextColor: #B1B1B1;
 @redFontColor: #ff3333;
 @redFontHover: #F25C5C;
 @greyOverColor: #999999;
@@ -85,9 +85,17 @@ body {
 }
 
 .semiTransparent {
-  background-color: RGBA(255,255,255,.6);
+  background-color: RGBA(144,144,144,.6);
   fill: @greyOverColor;
   color: @navBackColor;
+}
+
+.semiGrayTransparent {
+  background-color: RGBA(51,51,51,.6);
+}
+
+.semiBlackTransparent {
+  background-color: RGBA(0,0,0,.4);
 }
 
 .drombtn {
@@ -97,8 +105,8 @@ body {
   height: 48px;
   border-radius: 0px;
   border-width: 2px;
-  padding-top: 12px;
-  letter-spacing: 1px;
+  padding-top: 13px;
+  letter-spacing: 2px;
   background-color: transparent;
   &.redbtn {
     border-color: @redFontColor;
@@ -169,16 +177,14 @@ body {
 // dealers and about us common footer
 
 .complexFooter {
-  height: 270px;
   background-color: RGBA(0,0,0,.4);
   border-top: 1px solid @goldLife;
   padding: 47px 0px 0px 20px;
   letter-spacing: 1px;
   .goldbox {
-    &>p {
-      color: @navFontColor;
-      background-color: @goldLife;
-    }
+    color: @navFontColor;
+    background-color: @goldLife;
+    background-color: @goldLife;
   }
   .sickabox {
     width: 23.16%;
@@ -190,15 +196,16 @@ body {
     color: @navBackColor;
     display: inline-flex;
     .newsletter {
-      padding-left: 30px;
+      padding-left: 55px;
     }
   }
   .futurabox {
+    height: 180px;
     width: 23.16%;
     &.largecol {
       width: 30.5%;
     }
-    padding-top: 25px;
+    padding-top: 21px;
     font-family: 'FuturaEF-DemiBold';
     font-size: 15px;
     color: @navBackColor;
@@ -206,16 +213,38 @@ body {
       margin: 0 0 5px;
     }
     .signupbox {
+      textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {  
+          border: 1px solid @goldLife; 
+          outline: 0 none;
+      }
       display: inline-flex;
       font-size: 14px;
       padding-top: 15px;
+       ::-webkit-input-placeholder {
+           color: @greyBackground;
+        }
+
+        :-moz-placeholder { /* Firefox 18- */
+           color: @greyBackground;
+        }
+
+        ::-moz-placeholder {  /* Firefox 19+ */
+           color: @greyBackground;
+        }
+
+        :-ms-input-placeholder {  
+           color: @greyBackground;
+        }
       .emailfieldbox {
+        padding-top: 0px;
         width: 185px;
         height: 30px;
         border: none;
         background-color: @navFontColor;
         color: @greyBackground;
         letter-spacing: 1px;
+        padding-left: 15px;
+       
       }
       .gobutton {
         width: 54px;
@@ -273,6 +302,26 @@ body {
   background: url(/SVGs/arrow.svg) no-repeat scroll center transparent;
 }
 
+.carousel-arrow-left {
+   background: url(/SVGs/arrow_left.svg) no-repeat scroll center transparent;
+   position: absolute;
+   top:50%;
+   margin-top: -14px;
+   height: 30px;
+   width: 30px;
+   margin-left: -20px;
+}
+
+.carousel-arrow-right {
+  background: url(/SVGs/arrow_right.svg) no-repeat scroll center transparent;
+  position: absolute;
+  top:50%;
+  margin-top: -14px;
+  height: 30px;
+  width: 30px;
+  margin-left: -10px;
+}
+
 .carouselpanel {
   padding: 0;
   height: 100%;
@@ -324,6 +373,7 @@ body {
       padding-left: 8px;
       margin-right: 52px;
       display:inline-block;
+      
       &.components {
         background: url("/SVGs/components.svg") no-repeat left;
       }
@@ -378,6 +428,27 @@ body {
           color:@greyOverColor!important;
         }
       }
+    }
+    .dropdown-menu {
+      background-color: RGBA(0,0,0,.7);
+      padding: none;
+      border:none;
+      text-align: center;
+      position: relative;
+      .itemMenu {
+        &>a {
+          color: @navBackColor;
+        }
+        &:hover, parent:hover{
+          background-color: RGBA(0,0,0,.5);
+          border: 1px solid @redFontColor;
+          &>a {
+              background-color: RGBA(0,0,0,0);
+              color:@redFontHover!important;
+            
+          }
+        }
+      }
     }   
   }
   
@@ -394,9 +465,10 @@ body {
   width: @totalWide;
   background-color: @navFontColor;
   padding-top: 7px;
-  font-family: 'Gibson-Light';
+  font-family: 'FuturaEF-DemiBold';
   color:@navBackColor;
   .copyright {
+    font-family: 'Gibson-Light';
     padding-left: 50px;
     padding-top: 8px;
     font-size: 15px;
@@ -406,12 +478,13 @@ body {
     text-align: center;
     .pict {
       padding-right: 35px;
-      font-size: 16px;
-      word-spacing: 2px;
-      background: url("/SVGs/lift.svg") no-repeat right;
+      font-size: 14px;
+      letter-spacing: 1.1px;
+      //word-spacing: 2px;
+      background: url("/SVGs/lift.svg") no-repeat right -8px;
       display:inline-block;
       &>a {
-        color:@grayTextColor;
+        color:@greyOverColor;
       }
     }
   }
