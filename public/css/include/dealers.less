@@ -1,7 +1,3 @@
-.bgmap {
-	height: 168px;
-	.at2x("/images/dealers/BG_map.png", 960px, 168px);
-}
 .bannerdealer {
 	height: 80px;
 	background-color: @navFontColor;
@@ -11,11 +7,11 @@
 	width: 320px;
 	position: relative;
 	top: -45px;
-	left: 620px;
+	left: 590px;
 	background: url(/images/dealers/dealers.svg) no-repeat scroll 0px 0px transparent;
 }
 .maskdealer {
-	background-color: RGBA(51,51,51,.7);
+	background-color: RGBA(255,255,255,.9);
 }
 .dealerheaders {
 	text-align: center;
@@ -28,66 +24,74 @@
 }
 
 .dealerbox{
+	letter-spacing: 1px;
 	width: 300px;
 	font-family: 'Gibson-Light';
 	color: @goldLife;
 	font-size: 21px;
-	margin-left: 20px;
-	border-bottom: 1px solid @goldLife;;
+	margin-left: 48px;
+	padding-top: 15px;
+	&.rightbox {
+		padding-left: 0px;
+		margin-left: -7px;
+	}
 	.dealerstitle {
 		font-size: 36px;
 		&>p {
-		margin-bottom: -5px;
+			margin-bottom: -5px;
 		}
 	}
 	.dealerstel {
 		font-size: 32px;
 		&>p {
-		margin-bottom: 20px;
+			margin-bottom: 27px;
 		}
 	}
 	.dealertext {
 		&>p {
-		margin-bottom: 0px;
+			margin-bottom: 0px;
+		}
+	}
+	.dealersweb {
+		&>p {
+			padding-left: 14px;
 		}
 	}
 }
 
-.newdealerbox {
-	margin: 20px 0px 40px 35px;
-	width: 650px;
+.newdealerboxtop {
+	border-top: 1px solid @goldLife;
+	margin: 20px 0px 11px 35px;
+	padding-left: 28px;
+	padding-top: 12px;
+	width: 890px;
 	letter-spacing: 1px;
-	.newdealertitle {
-		font-family: 'FuturaEF-DemiBold';
-		font-size: 21px;
-		color: @redFontColor;
-	}
-	.newdealertext {
-		font-family: 'Gibson-Light';
-		font-size: 18px;
-		color: @goldLife;
+	font-family: 'FuturaEF-DemiBold';
+	font-size: 21px;
+	color: @graydark;
+	letter-spacing: 1px;
+}
+.newdealerboxbottom {
+	font-family: 'Gibson-Light';
+	font-size: 18px;
+	letter-spacing: 1px;
+	color: black;
+	background-color: @graydrom;
+	padding: 13px 150px 1px 50px;
+	line-height: 28px;
+	.floatbtn {
+		position: absolute;
+		left: 805px;
+		top: 100px;
+		font-size: 12px;
+		width: 120px;
+		height: 30px;
+		padding-top: 6px;
 	}
 }
 
 #map-dealer { 
-	height: 400px; 
-	margin-top: 20px;
-	margin-left: 50px; 
+	height: 600px;
+	margin: -15px;
 	padding: 0;
-}
-.maskmap {
-	position: absolute;
-	-webkit-transform: rotate(-8deg);
-	transform: rotate(-8deg);
-	z-index: 42;
-	height: 220px;
-	width: 65px;
-	top:18px;
-	left:0px;
-	background: url(/images/background_picture.jpg)  scroll 0 0 transparent;
-}
-.maskmap2 {
-	height: 220px;
-	width: 65px;
-	background-color: RGBA(51,51,51,.7);
 }

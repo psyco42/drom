@@ -6,7 +6,8 @@ block content
 		function initialize() {
 			var mapOptions = {
 				center: { lat: 42.677258, lng: 23.332899},
-				zoom: 17
+				scrollwheel:false,
+				zoom: 16
 			};
 			var styles = [
 				  {
@@ -35,8 +36,8 @@ block content
 			mapOptions);
 			map.mapTypes.set('map_style', styledMap);
 			map.setMapTypeId('map_style');
-			var bikeLayer = new google.maps.BicyclingLayer();
-			bikeLayer.setMap(map);
+			//- var bikeLayer = new google.maps.BicyclingLayer();
+			//- bikeLayer.setMap(map);
 			var marker = new google.maps.Marker({
 			    position: { lat: 42.677258, lng: 23.332899},
 			    map: map,
@@ -46,45 +47,33 @@ block content
 		google.maps.event.addDomListener(window, 'load', initialize);
 	.container.commonPanel
 		.row
-			.col-md-12.bgmap
+			.col-md-12
+				div#map-dealer
 		.row
 			.col-md-12.bannerdealer
 				div.logodealers
-		.row.dealerheaders.maskdealer
-			.col-md-6
-				p Address / Country / Phone
-			.col-md-6
-				p Map
 		.row.maskdealer
 			.col-md-4
 				div.dealerbox
 					div.dealerstitle
 						p Sportcom
 					div.dealertext
-						p Lozonets, Hristo Smirnenski 74A
-						p Sofia 1164
-						p Bulgaria
+						p Lozonets
+						p Hristo Smirnenski 74A
+						p Sofia 1164, Bulgaria
+			.col-md-4
+			.col-md-4
+				div.dealerbox.rightbox
 					div.dealerstel
-						p +359 886 722615	
-				div.dealerbox
-					div.dealerstitle
-						p Sportcom
-					div.dealertext
-						p Lozonets, Hristo Smirnenski 74A
-						p Sofia 1164
-						p Bulgaria
-					div.dealerstel
-						p +359 886 722615	
-			.col-md-8
-				//- div.maskmap
-				//- 	div.maskmap2
-				div#map-dealer
+						p +359 886 722615
+					div.dealersweb
+						p www.industrial-bg.com		
 		.row.maskdealer
-			div.newdealerbox
-				div.newdealertitle
-					p Become an authorized Drom dealer
-				div.newdealertext
-					p Our goal to create a solid network of dealers worldwide can only happens with the right partners. If you would like to get involve we invite you to contact us for more information.
+			div.newdealerboxtop
+					p Become an authorized Dröm reseller.
+			div.newdealerboxbottom
+				p Our goal to create a solid network of dealers world wide can only happens with the right partners. If you would like to get involved we invite you to contact us for more information.
+				a.btn.btn-default.drombtn.redbtn.transpabgbtn.floatbtn.nav-link(href='mailto:mario@dromride.com') START NOW
 		.row.complexFooter
 			.row
 				.col-md-3.sickabox.largecol
