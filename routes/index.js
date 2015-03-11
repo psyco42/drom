@@ -24,24 +24,23 @@ exports.dealers = function(req, res){
 };
 
 exports.signup = function(req, res) {
-    var v = req.body;
-    if (
-        v.email && v.email.length
-    ) {
-        var mailer = require('../public/js/mailer'),
+      var v = req.body;console.log(req.body);
+      if (v.msg) {
+        var subject = 'New message from Drom website', text = 'From ' + v.name + ' contactable on ' + v.email + '. "' + v.msg + '"';
+      } else {
+        var subject = 'New dealer request', text = 'New dealer email: ' + v.email;
+      }
+      var mailer = require('../public/js/mailer'),
             mail = {
                 from: v.email,
-                subject: 'New dealer request',
-                text: [
-                    'New dealer email: ' + v.email
-                ].join('')
+                subject: subject,
+                text: text
             };
 
         mailer.send(mail, function(v) {
-            res.json({success: true, answer: v});
+                    // req.flash('success', 'Votre message à bien été envoyé.');
+             res.redirect('back');
+            //res.json({success: true, answer: v});
         });
-    } else {
-        res.json({success: false});
-    }
 
 };
