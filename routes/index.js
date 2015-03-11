@@ -28,7 +28,7 @@ exports.signup = function(req, res) {
     if (
         v.email && v.email.length
     ) {
-        var mailer = require('../lib/mailer'),
+        var mailer = require('../public/js/mailer'),
             mail = {
                 from: v.email,
                 subject: 'New dealer request',
