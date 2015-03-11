@@ -22,7 +22,7 @@ router.get('/dealers', function(req, res, next) {
 	res.render('dealers', {selection:'dealers'});
 });
 
-router.get('/signup', function(req, res, next) {
+router.post('/signup', function(req, res, next) {
   	var v = req.body;
     
     if (v.email && v.email.length) {
