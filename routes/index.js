@@ -1,30 +1,29 @@
+var express = require('express');
+var router = express.Router();
 
-/*
- * GET home page.
- */
+/* GET home page. */
+router.get('/', function(req, res, next) {
+	res.render('index');
+});
 
-exports.index = function(req, res){
-  res.render('index');
-};
+router.get('/components', function(req, res, next) {
+	res.render('components', {selection:'components'});
+});
 
-exports.components = function(req, res){
-  res.render('components', {selection:'components'});
-};
+router.get('/lifestyle', function(req, res, next) {
+	res.render('lifestyle', {selection:'lifestyle'});
+});
 
-exports.lifestyle = function(req, res){
-  res.render('lifestyle', {selection:'lifestyle'});
-};
+router.get('/aboutus', function(req, res, next) {
+	res.render('aboutus', {selection:'aboutus'});
+});
 
-exports.aboutus = function(req, res){
-  res.render('aboutus', {selection:'aboutus'});
-};
+router.get('/dealers', function(req, res, next) {
+	res.render('dealers', {selection:'dealers'});
+});
 
-exports.dealers = function(req, res){
-  res.render('dealers', {selection:'dealers'});
-};
-
-exports.signup = function(req, res) {
-      var v = req.body;console.log(req.body);
+router.post('/signup', function(req, res, next) {
+    var v = req.body;console.log(req.body);
       if (v.msg) {
         var subject = 'New message from Drom website', text = 'From ' + v.name + ' contactable on ' + v.email + '. "' + v.msg + '"';
       } else {
@@ -37,10 +36,10 @@ exports.signup = function(req, res) {
                 text: text
             };
 
-        mailer.send(mail, function(v) {
-                    // req.flash('success', 'Votre message à bien été envoyé.');
-             res.redirect('back');
-            //res.json({success: true, answer: v});
-        });
+      mailer.send(mail, function(v) {
+        // req.flash('success', 'Votre message à bien été envoyé.');
+        res.redirect('back');
+      });
+});
 
-};
+module.exports = router;
