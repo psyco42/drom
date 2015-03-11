@@ -40,7 +40,7 @@
 		.col-md-2.futurabox
 			a(data-toggle="modal", href='#contactModal') CONTACT US
 			p RIDERS SERVICE
-			p WARRANTY
+			a(data-toggle="modal", href='#warrantyModal') WARRANTY
 			p PRIVACY POLICY
 			p RETURN POLICY
 		.col-md-2.futurabox
@@ -63,3 +63,15 @@ div.modal(id="contactModal" class="modal fade" tabindex="-1" role="dialog")
 							input(id='email',type='email',value='',placeholder='Email',name='email', required).smallfieldbox.form-control.center-block
 							input(id='msg',type='textarea',value='',placeholder='Message',name='msg', required).bigfieldbox.form-control.center-block
 							input(type='submit',value='SEND',data-transition='fade', data-theme='c').sendbutton.form-control.center-block
+div.modal(id="warrantyModal" class="modal fade" tabindex="-1" role="dialog")
+	div.modal-dialog
+		div.modal-content.warrantymodal
+			.modal-header
+				button(type="button", class="close", data-dismiss="modal")
+				p Warranty
+			.modal-body
+				p Dröm warranty covers all manufacturer defects in materials and workmanship for a period of (1) year from the original date of purchase from an authorized Dröm dealer or web reseller. Coverage is valid only with proof of purchase from an authorized Dröm dealer. The product will be repaired, or replaced: If, upon inspection it is found to be defective in materials or workmanship by Dröm. 
+				p This warranty does not apply to damage resulting from normal wear and tear, accident, abuse, negligence, impact, repairs or alterations outside of our facility.  The warranty program does not cover scratched on the components or use outside the instructions and specification of warranty policy.
+				p If you desire to return product for service or warranty consideration, you will need to email sales@dromride.com in order to get a WRA (Warranty Return Authorization) form, number and shipping address. All products shipped to Dröm without this WRA Number will be refused.
+				p Please be sure to include in the package the correctly filled WRA form, which will be emailed back to you.
+				p The customer returning product for consideration is responsible for all freight charges to Dröm.  If the product is deemed a warranty issue Dröm will pay the freight charges to return the product to you by normal ground transportation.
