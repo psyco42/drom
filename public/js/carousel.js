@@ -3,63 +3,63 @@ var carousels = [{
     id: 'carousel-components-spacer',
     picSize: '480px 480px',
     pics: [
-        '/images/COMPONENTS/eclipse.png',
-        '/images/COMPONENTS/space_black.png',
-        '/images/COMPONENTS/red_art.png',
-        '/images/COMPONENTS/space_red.png',
-        '/images/COMPONENTS/blue_art.png',
-        '/images/COMPONENTS/space_blue.png',
-        '/images/COMPONENTS/gold_art.png',
-        '/images/COMPONENTS/space_gold.png',
-        '/images/COMPONENTS/gray_art.png',
-        '/images/COMPONENTS/space_gray.png'
+        '/images/components/eclipse.png',
+        '/images/components/space_black.png',
+        '/images/components/red_art.png',
+        '/images/components/space_red.png',
+        '/images/components/blue_art.png',
+        '/images/components/space_blue.png',
+        '/images/components/gold_art.png',
+        '/images/components/space_gold.png',
+        '/images/components/gray_art.png',
+        '/images/components/space_gray.png'
     ]
 }, {
     id: 'carousel-components-clamp',
     picSize: '480px 480px',
     pics: [
-        '/images/COMPONENTS/armira_34_31.png',
-        '/images/COMPONENTS/armira1.png',
-        '/images/COMPONENTS/armira3.png',
-        '/images/COMPONENTS/armira2.png',
-        '/images/COMPONENTS/armira_red1.png',
-        '/images/COMPONENTS/armira_red2.png',
-        '/images/COMPONENTS/armira_blue.png',
-        '/images/COMPONENTS/armira_gold1.png',
-        '/images/COMPONENTS/armira_gold2.png',
-        '/images/COMPONENTS/armira_gray.png'
+        '/images/components/armira_34_31.png',
+        '/images/components/armira1.png',
+        '/images/components/armira3.png',
+        '/images/components/armira2.png',
+        '/images/components/armira_red1.png',
+        '/images/components/armira_red2.png',
+        '/images/components/armira_blue.png',
+        '/images/components/armira_gold1.png',
+        '/images/components/armira_gold2.png',
+        '/images/components/armira_gray.png'
     ]
 }, {
     id: 'carousel-components-dhclamp',
     picSize: '480px 480px',
     pics: [
-        '/images/COMPONENTS/seatclamp1.png',
-        '/images/COMPONENTS/blue.png',
-        '/images/COMPONENTS/black.png',
-        '/images/COMPONENTS/red.png'
+        '/images/components/seatclamp1.png',
+        '/images/components/blue.png',
+        '/images/components/black.png',
+        '/images/components/red.png'
     ]
 }, {
     id: 'carousel-components-stem',
     picSize: '480px 480px',
     pics: [
-        '/images/COMPONENTS/stemS1.png',
-        '/images/COMPONENTS/stemS2.png',
-        '/images/COMPONENTS/stemS3.png',
-        '/images/COMPONENTS/stemS4.png',
-        '/images/COMPONENTS/stem_blue.png',
-        '/images/COMPONENTS/stem_red.png',
-        '/images/COMPONENTS/stem_red_blue.png',
-        '/images/COMPONENTS/stem_blue_gray.png',
-        '/images/COMPONENTS/stem_black_gray.png',
+        '/images/components/stemS1.png',
+        '/images/components/stemS2.png',
+        '/images/components/stemS3.png',
+        '/images/components/stemS4.png',
+        '/images/components/stem_blue.png',
+        '/images/components/stem_red.png',
+        '/images/components/stem_red_blue.png',
+        '/images/components/stem_blue_gray.png',
+        '/images/components/stem_black_gray.png',
     ]
 }, {
     id: 'carousel-components-stem35',
     picSize: '480px 480px',
     pics: [
-        '/images/COMPONENTS/stem.png',
-        '/images/COMPONENTS/angle.png',
-        '/images/COMPONENTS/right.png',
-        '/images/COMPONENTS/top.png'
+        '/images/components/stem.png',
+        '/images/components/angle.png',
+        '/images/components/right.png',
+        '/images/components/top.png'
     ]
 }, {
     id: 'carousel-aboutus-header',
