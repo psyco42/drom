@@ -385,6 +385,38 @@ body {
     letter-spacing: 1px;
   }
 }
+.returnmodal {
+  border-radius: 0px;
+  width: 640px;
+  height: 640px;
+  background-color: white;
+  font-family: 'Gibson-Light';
+  font-size: 14px;
+  color: @goldLife;
+  letter-spacing: 1px;
+  .modal-header {
+    text-align: center;
+    background: url(/SVGs/return.svg) no-repeat scroll center 50px transparent;
+    border-bottom: none;
+    padding: 15px 15px 0px 15px;
+    &>p {
+      padding-top: 110px;
+      font-size: 36px;
+    }
+    &>button {
+      background: url(/SVGs/x.svg) no-repeat scroll center transparent;
+      width: 36px;
+      height: 36px;
+      border: 1px solid @redFontColor;
+      opacity: 1;
+    }
+  }
+  .modal-body {
+    padding-left: 60px;
+    padding-right: 59px;
+    letter-spacing: 1px;
+  }
+}
 .contactmodal {
   border-radius: 0px;
   width: 640px;
