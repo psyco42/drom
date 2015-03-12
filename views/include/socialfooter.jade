@@ -39,7 +39,7 @@
 				div.ico.tumb.bottomright
 		.col-md-2.futurabox.modallink
 			a(data-toggle="modal", href='#contactModal') CONTACT US
-			p RIDERS SERVICE
+			a(data-toggle="modal", href='#riderModal') RIDERS SERVICE
 			a(data-toggle="modal", href='#warrantyModal') WARRANTY
 			a(data-toggle="modal", href='#privacyModal') PRIVACY POLICY
 			p RETURN POLICY
@@ -92,3 +92,11 @@ div.modal(id="privacyModal" class="modal fade" tabindex="-1" role="dialog")
 						li To send periodic emails The email address you provide for order processing, will only be used to send you information and updates pertaining to your order.
 						li If you decide to opt-in to our mailing list, you will receive emails that may include company news, updates, related product or service information, etc.
 						li Note: If at any time you would like to unsubscribe from receiving future emails, we include detailed unsubscribe instructions at the bottom of each email.
+div.modal(id="riderModal" class="modal fade" tabindex="-1" role="dialog")
+	div.modal-dialog
+		div.modal-content.ridermodal
+			.modal-header
+				button(type="button", class="close", data-dismiss="modal")
+				p Riders service
+			.modal-body
+				p todo
