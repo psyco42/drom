@@ -42,4 +42,8 @@ router.post('/signup', function(req, res, next) {
       });
 });
 
+router.get('/oauth', function(req, res, next) {
+  res.send(req.query.code);
+});
+
 module.exports = router;

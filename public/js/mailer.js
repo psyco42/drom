@@ -2,6 +2,8 @@ module.exports = (function() {
 
     var config = require('../../config'),
         nodemailer = require('nodemailer'),
+        google = require('googleapis.js'),
+        OAuth2Client = google.auth.OAuth2,
         sendmailTransport = require('nodemailer-sendmail-transport'),
         generator = require('xoauth2').createXOAuth2Generator(config.oauthsetup);
     // generator.on('token', function(token){
