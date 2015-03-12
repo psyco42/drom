@@ -148,16 +148,6 @@ body {
       padding: 0px;
 }
 
-.followus {
-  padding-top: 10px;
-  &>p {
-    font-family: 'sickamoreregular';
-    font-size: 72px;
-    color: @navBackColor;
-    letter-spacing: 7px;
-  }
-}
-
 .rowWithBorder {
       position:absolute;
       height:307px;
@@ -219,8 +209,11 @@ body {
       display: inline-block;
       margin: 0 0 5px;
       color: white;
-      &:hover, &:focus {
+      outline: 0 none;
+      text-decoration: none;
+      &:hover, &:focus &:visited &:active {
         text-decoration: none;
+        outline: 0 none;
       }
     }
     }
@@ -282,6 +275,44 @@ body {
     }
   }
 }
+
+.privacymodal {
+    border-radius: 0px;
+  width: 640px;
+  height: 640px;
+  background-color: white;
+  font-family: 'Gibson-Light';
+  font-size: 14px;
+  color: @goldLife;
+  letter-spacing: 1px;
+  // text-align: center;
+  .modal-header {
+    background: url(/SVGs/Privacy.svg) no-repeat scroll center 50px transparent;
+    border-bottom: none;
+    text-align: center;
+    padding: 15px 15px 0px 15px;
+    &>p {
+      padding-top: 125px;
+      font-size: 36px;
+    }
+    &>button {
+      background: url(/SVGs/x.svg) no-repeat scroll center transparent;
+      width: 36px;
+      height: 36px;
+      border: 1px solid @redFontColor;
+      opacity: 1;
+    }
+  }
+  .modal-body {
+    padding-left: 42px;
+    padding-right: 42px;
+    letter-spacing: 1px;
+    &>ul li {
+      padding-bottom: 15px;
+    }
+  }
+}
+
 .warrantymodal {
   border-radius: 0px;
   width: 640px;

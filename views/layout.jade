@@ -16,5 +16,13 @@ html
 		script(src="/js/lib/jquery.js")
 		script(src="/js/lib/bootstrap.js")
 		script(src="/js/carousel.js")
-		//- script(src="/js/lib/retina.min.js")
+		script(type='text/javascript').
+			$( "a.social" ).hover(function() {
+				$( ".followUsSvg" ).show();
+				$( ".followus" ).show();
+			});
+			$( "a.social" ).mouseleave(function() {
+				$( ".followUsSvg" ).hide();
+				$( ".followus" ).hide();
+			});
 				
