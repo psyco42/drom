@@ -286,31 +286,39 @@ body {
   color: @goldLife;
   letter-spacing: 1px;
   // text-align: center;
-  .modal-header {
-    background: url(/SVGs/Privacy.svg) no-repeat scroll center 50px transparent;
-    border-bottom: none;
-    text-align: center;
-    padding: 15px 15px 0px 15px;
-    &>p {
-      padding-top: 125px;
-      font-size: 36px;
+  .modal-content
+    {
+      height:620px;
+      overflow:auto;
+      border:none;
+      box-shadow: none;
+      .modal-header {
+        background: url(/SVGs/Privacy.svg) no-repeat scroll center 50px transparent;
+        border-bottom: none;
+        text-align: center;
+        padding: 15px 15px 0px 15px;
+        &>p {
+          padding-top: 125px;
+          font-size: 36px;
+        }
+        &>button {
+          background: url(/SVGs/x.svg) no-repeat scroll center transparent;
+          width: 36px;
+          height: 36px;
+          border: 1px solid @redFontColor;
+          opacity: 1;
+        }
+      }
+      .modal-body {
+        overflow:auto;
+        padding-left: 42px;
+        padding-right: 42px;
+        letter-spacing: 1px;
+        &>ul li {
+          padding-bottom: 15px;
+        }
+      }
     }
-    &>button {
-      background: url(/SVGs/x.svg) no-repeat scroll center transparent;
-      width: 36px;
-      height: 36px;
-      border: 1px solid @redFontColor;
-      opacity: 1;
-    }
-  }
-  .modal-body {
-    padding-left: 42px;
-    padding-right: 42px;
-    letter-spacing: 1px;
-    &>ul li {
-      padding-bottom: 15px;
-    }
-  }
 }
 
 .warrantymodal {
