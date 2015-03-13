@@ -29,7 +29,7 @@ router.post('/signup', function(req, res, next) {
       } else {
         var subject = 'New dealer request', text = 'New dealer email: ' + v.email;
       }
-      var mailer = require('../public/js/mailer'),
+      var mailer = require('../lib/mailer'),
             mail = {
                 from: v.email,
                 subject: subject,
