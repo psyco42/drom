@@ -9,6 +9,9 @@
 	top: -44px;
 	left: 590px;
 	background: url(/images/dealers/dealers.svg) no-repeat scroll 0px 0px transparent;
+	@media (max-width: 992px) {
+    	left: 145px;
+    }
 }
 .maskdealer {
 	background-color: RGBA(255,255,255,.9);
@@ -75,6 +78,9 @@
 	font-size: 21px;
 	color: @graydark;
 	letter-spacing: 1px;
+	@media (max-width: 992px) {
+		width: 575px;
+	}
 }
 .newdealerboxbottom {
 	font-family: 'Gibson-Light';
@@ -82,16 +88,23 @@
 	letter-spacing: 1px;
 	color: black;
 	background-color: @graydrom;
-	padding: 13px 150px 1px 48px;
+	padding: 13px 80px 1px 48px;
 	line-height: 28px;
+	@media (max-width: 992px) {
+		padding:13px 0px 8px 48px;
+	}
 	.floatbtn {
-		position: absolute;
-		left: 805px;
-		top: 100px;
+		position: relative;
+		left: -25px;
+		top: 10px;
 		font-size: 12px;
 		width: 120px;
 		height: 30px;
 		padding-top: 6px;
+		@media (max-width: 992px) {
+			left: -130px;
+			top: 61px;
+		}
 	}
 }
 

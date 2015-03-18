@@ -13,6 +13,7 @@
 @darkGrey: #666;
 
 @totalWide: 960px;
+@mobileWide: 640px;
 @topbarheight:48px;
 
 @highdpi: ~"(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx)";
@@ -69,8 +70,12 @@ body {
   background-color: @greyBackground;
 }
 
+
 .container {
   width: @totalWide;
+  @media (max-width: 992px) {
+    width: @mobileWide;
+  }
 }
 
 .navstyle {
@@ -80,10 +85,6 @@ body {
 
 .commonPanel {
   background: url(/images/background_picture.jpg)  scroll 0 0 transparent;
-  .row {
-    width: @totalWide;
-    position: relative;
-  }
 }
 
 .semiTransparent {
@@ -156,14 +157,24 @@ body {
       margin-top:8px;
       &.white {
         border-left: 1px solid white;
+        @media (max-width: 992px) {
+          border:none;
+        }
       }
       &.black {
         border-left: 1px solid black;
+        @media (max-width: 992px) {
+          border:none;
+        }
       }
       &.gold {
         color: @goldLife;
         border-left: 1px solid @goldLife;
+        @media (max-width: 992px) {
+          border:none;
+        }
       }
+
 }
 
 // dealers and about us common footer
@@ -211,7 +222,7 @@ body {
       color: white;
       outline: 0 none;
       text-decoration: none;
-      &:hover, &:focus &:visited &:active {
+      &:hover, &:focus, &:visited, &:active {
         text-decoration: none;
         outline: 0 none;
       }
@@ -368,7 +379,7 @@ body {
     border-bottom: none;
     padding: 15px 15px 0px 15px;
     &>p {
-      padding-top: 100px;
+      padding-top: 116px;
       font-size: 36px;
     }
     &>button {
@@ -394,8 +405,8 @@ body {
   font-size: 14px;
   color: @goldLife;
   letter-spacing: 1px;
-  .modal-header {
     text-align: center;
+  .modal-header {
     background: url(/SVGs/return.svg) no-repeat scroll center 50px transparent;
     border-bottom: none;
     padding: 15px 15px 0px 15px;
@@ -689,6 +700,16 @@ body {
     padding-top: 0px;
     padding-left: 0px;
   }
+
+}
+.navbar-default .navbar-toggle {
+    border: none;
+    background: url("/SVGs/menu.svg") no-repeat center;
+    height: 30px;
+    width: 28px;
+    &:hover, &:focus, &:visited, &:active {
+      background: url("/SVGs/menu.svg") no-repeat center;
+    }
 }
 
 // FOOTER
@@ -696,6 +717,9 @@ body {
 .footer {
   height: @topbarheight;
   width: @totalWide;
+  @media (max-width: 992px) {
+    width: @mobileWide;
+  }
   background-color: @navFontColor;
   padding-top: 7px;
   font-family: 'FuturaEF-DemiBold';

@@ -31,7 +31,7 @@ module.exports = (function() {
                 html: config.html
             };
 
-            oauth2transport.sendMail(mailOptions, function(error, response) {
+            smtpTransport.sendMail(mailOptions, function(error, response) {
                 if (error) {
                     console.log(error);
                 } else {
