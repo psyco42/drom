@@ -1,6 +1,8 @@
 .main {
       height: 332px;
-      .at2x("/images/home/images/main_picture.png", 960px, 332px);
+      @media (min-width: 992px) {
+        .at2x("/images/home/images/main_picture.png", 960px, 332px);
+      }
       .floatMainText {
         font-family: 'Gibson-Light';
         color:@grayTextColor;
@@ -79,16 +81,41 @@
           left: 81px;
           top:35px;
         }
+        &.mobileTitle {
+          height: 82px;
+          width: 312px;
+          top:10px;
+          &.amira {
+            background: url(/SVGs/armira_mobile.svg) no-repeat scroll center transparent;
+          }
+          &.pitadora {
+            background: url(/SVGs/pitadora_mobile.svg) no-repeat scroll center transparent;
+          }
+          &.dh {
+            background: url(/SVGs/dh_clamp_mobile.svg) no-repeat scroll center transparent;
+          }
+          &.spacers {
+            background: url(/SVGs/spacers.svg) no-repeat scroll center transparent;
+          }
+        }
       }
 }
 .mobiletopborder {
-  border: solid 1px black;
+  @media (max-width: 992px) {
+    border-top: solid 1px black;
+  }
 }
 .dotblack {
 	background: url(/SVGs/dots_black.svg) no-repeat scroll 28px 45px white;
+  @media (max-width: 992px) {
+      background: url(/SVGs/dots_black.svg) no-repeat scroll 28px 126px white;
+    }
 }
 .dotwhite {
 	background: url(/SVGs/dots_white.svg) no-repeat scroll 28px 37px transparent;
+  @media (max-width: 992px) {
+      background: url(/SVGs/dots_white.svg) no-repeat scroll 28px 118px transparent;
+    }
 }
 .followDiv {
       font-family: 'Gibson-Light';
@@ -131,6 +158,10 @@
         width: 463px;
       }
       padding: 10px 0px 0px 278px;
+      @media (max-width: 992px) {
+        height: 172px;
+        padding: 60px 0px 0px 122px;
+      }
 }
 .armira {
       &:hover {
@@ -170,9 +201,11 @@
       .at2x("/images/home/images/spacers.png", 320px, 320px);
     }
 .chainringPict {
-  .at2x("/images/home/images/chainring.png", 320px, 320px);
-  &:hover {
-    .at2x("/images/home/images/hover_chainring.png", 320px, 320px);
+  @media (min-width: 992px) {
+    .at2x("/images/home/images/chainring.png", 320px, 320px);
+    &:hover {
+      .at2x("/images/home/images/hover_chainring.png", 320px, 320px);
+    }
   }
 }
 .ico {

@@ -2,19 +2,19 @@ module.exports = (function() {
 
     var config = require('../../config'),
         nodemailer = require('nodemailer'),
-        google = require('googleapis.js'),
-        OAuth2Client = google.auth.OAuth2,
-        sendmailTransport = require('nodemailer-sendmail-transport'),
-        generator = require('xoauth2').createXOAuth2Generator(config.oauthsetup);
+        // google = require('googleapis.js'),
+        // OAuth2Client = google.auth.OAuth2,
+        sendmailTransport = require('nodemailer-sendmail-transport');
+        // generator = require('xoauth2').createXOAuth2Generator(config.oauthsetup);
     // generator.on('token', function(token){
     //     console.log('New token for %s: %s', token.user, token.accessToken);
     // });
-    var oauth2transport = nodemailer.createTransport(({
-        service: 'gmail',
-        auth: {
-            xoauth2: generator
-        }
-    }));
+    // var oauth2transport = nodemailer.createTransport(({
+    //     service: 'gmail',
+    //     auth: {
+    //         xoauth2: generator
+    //     }
+    // }));
     var smtpTransport = nodemailer.createTransport({
         service: 'Gmail',
         auth: config.mailaccount

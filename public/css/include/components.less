@@ -31,6 +31,10 @@
 	&.lessPadTop {
 		padding-top: 20px;
 	}
+	@media (max-width: 992px) {
+    	height: 640px;
+    	font-size: 26px;
+    }
 }
 .banner {
 	height: 150px;
@@ -49,11 +53,19 @@
 	font-family: 'Gibson-Light';
 	padding: 0px 0px 24px 15px;
 	&>p {
-		letter-spacing: .6px;
+		letter-spacing: .7px;
 		margin-bottom: 7px;
 		&>a {
 			color: @redFontColor;
 		}
+	}
+	&.textFormat {
+		line-height: 31px;
+		letter-spacing: 1px;
+		@media (max-width: 992px) {
+	    	padding-right: 15px;
+	    	line-height: 47px;
+    	}
 	}
 	&>a:hover { text-decoration: none; }
 	&>a {
@@ -76,11 +88,15 @@
 }
 
 .spacerPictTxt {
-	.at2x("/images/components/spacer.png", 320px, 320px);
+	@media (min-width: 992px) {
+		.at2x("/images/components/spacer.png", 320px, 320px);
+	}
 }
 
 .eyesPictTxt {
-	.at2x("/images/components/eyes.png", 320px, 320px);
+	@media (min-width: 992px) {
+		.at2x("/images/components/eyes.png", 320px, 320px);
+	}
 	&>p {
 		position: absolute;
 		top: 267px;
@@ -101,10 +117,14 @@
 }
 
 .clampPictTxt {
-	.at2x("/images/components/clamp.png", 320px, 320px);
+	@media (min-width: 992px) {
+		.at2x("/images/components/clamp.png", 320px, 320px);
+	}
 }
 .bikestemPictTxt {
-	.at2x("/images/components/bikestem.png", 320px, 320px);
+	@media (min-width: 992px) {
+		.at2x("/images/components/bikestem.png", 320px, 320px);
+	}
 }
 
 .stem1PictTxt {

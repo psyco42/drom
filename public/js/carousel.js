@@ -25,7 +25,6 @@ var carousels = [{
         '/images/components/armira_red1.png',
         '/images/components/armira_red2.png',
         '/images/components/armira_blue.png',
-        '/images/components/armira_gold1.png',
         '/images/components/armira_gold2.png',
         '/images/components/armira_gray.png'
     ]
@@ -33,7 +32,6 @@ var carousels = [{
     id: 'carousel-components-dhclamp',
     picSize: '480px 480px',
     pics: [
-        '/images/components/seatclamp1.png',
         '/images/components/blue.png',
         '/images/components/black.png',
         '/images/components/red.png'
@@ -72,6 +70,56 @@ var carousels = [{
         '/images/aboutus/slide_pictures/5.jpg'
     ]
 }];
+
+if ($(document).width() < 940) {
+    var carousels = [{
+        id: 'carousel-components-spacer',
+        pics: [
+            '/images/components/space_black.png',
+            '/images/components/space_red.png',
+            '/images/components/space_blue.png',
+            '/images/components/space_gold.png',
+            '/images/components/space_gray.png'
+        ]
+    }, {
+        id: 'carousel-components-clamp',
+        pics: [
+            '/images/components/armira_34_31.png',
+            '/images/components/armira3.png',
+            '/images/components/armira_red1.png',
+            '/images/components/armira_blue.png',
+            '/images/components/armira_gold1.png',
+            '/images/components/armira_gray.png'
+        ]
+    }, {
+        id: 'carousel-components-dhclamp',
+        pics: [
+            '/images/components/blue.png',
+            '/images/components/black.png',
+            '/images/components/red.png'
+        ]
+    }, {
+        id: 'carousel-components-stem',
+        pics: [
+            '/images/components/stemS2.png',
+            '/images/components/stemS3.png',
+            '/images/components/stemS4.png',
+            '/images/components/stem_blue.png',
+            '/images/components/stem_red.png',
+            '/images/components/stem_blue_gray.png',
+            '/images/components/stem_black_gray.png',
+        ]
+    }, {
+        id: 'carousel-aboutus-header',
+        pics: [
+            '/images/aboutus/slide_pictures/1.jpg',
+            '/images/aboutus/slide_pictures/2.jpg',
+            '/images/aboutus/slide_pictures/3.jpg',
+            '/images/aboutus/slide_pictures/4.jpg',
+            '/images/aboutus/slide_pictures/5.jpg'
+        ]
+    }];
+}
 
 function Carousel(config) {
     var inner, thumbnails,
