@@ -70,8 +70,8 @@ var carousels = [{
         '/images/aboutus/slide_pictures/5.jpg'
     ]
 }];
-
-if ($(document).width() < 940) {
+ 
+if (window.innerWidth < 992) {
     var carousels = [{
         id: 'carousel-components-spacer',
         pics: [
