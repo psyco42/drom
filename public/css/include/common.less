@@ -607,11 +607,25 @@ body {
   background-color: @greyBackground;
   font-size: 18px;
   font-family: 'Gibson-Light';
+
+  .navbar-collapse {
+    @media (max-width: 992px) {
+      border: none;
+      height: 48px;
+      background-color: rgba(51,51,51,.8);
+    }
+  }
+
   .navbar-nav {
     .pict {
       padding-left: 8px;
-      margin-right: 52px;
+      margin-right: 39px;
       display:inline-block;
+      letter-spacing: 1px;
+      @media (max-width: 992px) {
+        margin-right: 12px;
+        margin-left: 14px;
+      }
       &:hover {
         .dropdown-menu {
           display: block;
@@ -646,64 +660,74 @@ body {
           }
         }
       }
-      &.components {
-        background: url("/SVGs/components.svg") no-repeat left;
-      }
-      &.lifestyle {
-        background: url("/SVGs/lifestyle.svg") no-repeat left;
-      }
-      &.dealers {
-        background: url("/SVGs/dealers.svg") no-repeat left;
-      }
-      &.aboutus {
-        background: url("/SVGs/about.svg") no-repeat left;
-      }
-      &.componentsA {
-        background: url("/SVGs/components_on.svg") no-repeat left;
-        &>a {
-          color: @redFontColor;
-          &:hover, parent:hover{
-            color:@redFontHover!important;
-          }
-        }
-      }
-      &.lifestyleA {
-        background: url("/SVGs/lifestyle_on.svg") no-repeat left;
-        &>a {
-          color: @redFontColor;
-          &:hover, parent:hover{
-            color:@redFontHover!important;
-          }
-        }
-      }
-      &.dealersA {
-        background: url("/SVGs/dealers_on.svg") no-repeat left;
-        &>a {
-          color: @redFontColor;
-          &:hover, parent:hover{
-            color:@redFontHover!important;
-          }
-        }
-      }
-      &.aboutusA {
-        background: url("/SVGs/about_on.svg") no-repeat left;
-        &>a {
-          color: @redFontColor;
-          &:hover, parent:hover{
-            color:@redFontHover!important;
-          }
-        }
-      }
       &>a {
-        color: @navFontColor;
-        &:hover, parent:hover{
-          color:@greyOverColor!important;
+          color: @navBackColor;
+          &:hover, parent:hover{
+            color:@navBackColor!important;
+          }
+        }
+      @media (min-width: 992px) {
+        &.components {
+          background: url("/SVGs/components.svg") no-repeat left;
+        }
+        &.lifestyle {
+          background: url("/SVGs/lifestyle.svg") no-repeat left;
+        }
+        &.dealers {
+          background: url("/SVGs/dealers.svg") no-repeat left;
+        }
+        &.aboutus {
+          background: url("/SVGs/about.svg") no-repeat left;
+          margin-right: 70px;
+        }
+        &.componentsA {
+          background: url("/SVGs/components_on.svg") no-repeat left;
+          &>a {
+            color: @redFontColor;
+            &:hover, parent:hover{
+              color:@redFontHover!important;
+            }
+          }
+        }
+        &.lifestyleA {
+          background: url("/SVGs/lifestyle_on.svg") no-repeat left;
+          &>a {
+            color: @redFontColor;
+            &:hover, parent:hover{
+              color:@redFontHover!important;
+            }
+          }
+        }
+        &.dealersA {
+          background: url("/SVGs/dealers_on.svg") no-repeat left;
+          &>a {
+            color: @redFontColor;
+            &:hover, parent:hover{
+              color:@redFontHover!important;
+            }
+          }
+        }
+        &.aboutusA {
+          background: url("/SVGs/about_on.svg") no-repeat left;
+          &>a {
+            color: @redFontColor;
+            &:hover, parent:hover{
+              color:@redFontHover!important;
+            }
+          }
+        }
+        &>a {
+          color: @navFontColor;
+          &:hover, parent:hover{
+            color:@greyOverColor!important;
+          }
         }
       }
     }
   }
   
   .navbar-brand {
+    height: @topbarheight;
     padding-top: 0px;
     padding-left: 0px;
   }
@@ -718,6 +742,7 @@ body {
       background: url("/SVGs/menu.svg") no-repeat center;
     }
 }
+
 
 // FOOTER
 
