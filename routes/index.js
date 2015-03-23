@@ -3,23 +3,23 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	res.render('index');
+	res.render('index', {title : 'Drom'});
 });
 
 router.get('/components', function(req, res, next) {
-	res.render('components', {selection:'components'});
+	res.render('components', {selection:'components', title : 'Drom - Components'});
 });
 
 router.get('/lifestyle', function(req, res, next) {
-	res.render('lifestyle', {selection:'lifestyle'});
+	res.render('lifestyle', {selection:'lifestyle', title : 'Drom - Lifestyle'});
 });
 
 router.get('/aboutus', function(req, res, next) {
-	res.render('aboutus', {selection:'aboutus'});
+	res.render('aboutus', {selection:'aboutus', title : 'Drom - About us'});
 });
 
 router.get('/dealers', function(req, res, next) {
-	res.render('dealers', {selection:'dealers'});
+	res.render('dealers', {selection:'dealers', title : 'Drom - Dealers'});
 });
 
 router.post('/signup', function(req, res, next) {

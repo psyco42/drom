@@ -32,6 +32,7 @@ var carousels = [{
     id: 'carousel-components-dhclamp',
     picSize: '480px 480px',
     pics: [
+        '/images/components/seatclamp1.png',
         '/images/components/blue.png',
         '/images/components/black.png',
         '/images/components/red.png'
@@ -94,6 +95,7 @@ if (window.innerWidth < 992) {
     }, {
         id: 'carousel-components-dhclamp',
         pics: [
+            '/images/components/seatclamp1.png',
             '/images/components/blue.png',
             '/images/components/black.png',
             '/images/components/red.png'

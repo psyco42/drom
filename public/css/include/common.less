@@ -530,12 +530,12 @@ body {
   }
 }
 
-.arrow {
-  position: relative;
-  top: -3px;
-  height: 20px;
-  background: url(/SVGs/arrow.svg) no-repeat scroll 442px transparent;
-}
+// .arrow {
+//   position: relative;
+//   top: -3px;
+//   height: 20px;
+//   background: url(/SVGs/arrow.svg) no-repeat scroll 442px transparent;
+// }
 
 .carousel-arrow-left {
    background: url(/SVGs/arrow_left.svg) no-repeat scroll center transparent;
@@ -555,6 +555,9 @@ body {
   height: 30px;
   width: 30px;
   left: 25px;
+  @media (max-width: 992px) {
+    left: 50px;
+  }
 }
 
 .carouselpanel {
