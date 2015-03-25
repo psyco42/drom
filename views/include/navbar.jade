@@ -6,6 +6,8 @@ nav#navbar.navbar.navbar-default.navbar-fixed-top(role='navigation')
             a.nav-link.navbar-brand(href='/#')
                 img(src="/SVGs/logo.svg", width="160", height="48")
         .collapse.navbar-collapse
+            div.nav.navbar-left
+                p updated: 03/26/2015
             ul.nav.navbar-right.navbar-nav
                 - var modules = [{page: 'components', title: 'COMPONENTS', menu: [{page: 'SPACERS', title: 'SPACERS'},{page: 'AMIRA', title: 'ARMIRA SEATCLAMP'},{page: 'DHclamp', title: 'DH SEATCLAMP'},{page: 'PITADORA', title: 'PITADORA STEM'}]},{page: 'lifestyle', title: 'LIFESTYLE'},{page: 'dealers', title: 'DEALERS'},{page: 'aboutus', title: 'ABOUT US'}]
                 each module in modules

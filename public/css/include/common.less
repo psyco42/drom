@@ -117,15 +117,15 @@ body {
   background-color: transparent;
   &.redbtn {
     border-color: @redFontColor;
-    color:@redFontColor;
+    color:@redFontColor !important;
   }
   &.whtbtn {
     border-color: @navBackColor;
-    color: @navBackColor;
+    color: @navBackColor !important;
   }
   &.goldbtn {
     border-color: @goldLife;
-    color: @goldLife;
+    color: @goldLife !important;
   }
   &.greybgbtn {
     background-color: RGBA(153,153,153,.6);
@@ -135,7 +135,7 @@ body {
   }
   &:hover {
     border-color: @navFontColor;
-    color: @navFontColor;
+    color: @navFontColor !important;
     background-color: RGBA(153,153,153,.6);
   }
 }
@@ -615,6 +615,12 @@ body {
       border: none;
       height: 48px;
       background-color: rgba(51,51,51,.8);
+    }
+    .navbar-left {
+      &>p {
+        font-size: 4px;
+        color: white;
+      }
     }
   }
 

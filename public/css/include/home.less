@@ -8,9 +8,12 @@
         color:@grayTextColor;
         position:relative;
         &.small {
-          letter-spacing: 1px;
-          font-size: 14px;
           width: 240px;
+          &>h1, &>h2, &>p {
+            letter-spacing: 1px;
+            font-size: 14px;
+            margin: 12px 0 10px;
+          }
         }
         &.rider {
           top:55px;
@@ -43,11 +46,17 @@
             font-size: 28px;
             letter-spacing: 1px;
         }
-        &.arrow {
-          background: url(/SVGs/arrow.svg) no-repeat scroll center transparent;
-          height: 26px;
+        &.arrowBow{
           top:63px;
+          left: 443px;
+          width: 26px;
+          .arrow {
+            background: url(/SVGs/arrow.svg) no-repeat scroll center transparent;
+            height: 26px;
+            width: 26px;
+          }
         }
+        
       }
     }
 .sub {
@@ -58,6 +67,24 @@
       .floatSubText {
         position: relative;
         width: 260px;
+        margin-bottom: 10px;
+        &>p {
+          margin-bottom: 0px;
+        }
+        &>a {
+          color: black;
+          &:hover, &:focus, &:visited, &:active {
+            text-decoration: none;
+            outline: 0 none;
+            cursor: text;
+          }
+        }
+        &.wh {
+            &>a {
+            color: @navBackColor !important;
+          }
+        
+        }
         &.ulw {
           top: 28px;
           left: 54px;
@@ -128,11 +155,13 @@
       word-spacing: 4px;
       .followText {
         padding-top: 75px;
-        word-spacing: 3px;
         margin-bottom: 160px;
-        letter-spacing: 1.8px;
-        &>p {
+        &>h2 {
+          font-size: 31px;
+          word-spacing: 3px;
+          letter-spacing: 1.8px;
           margin: 0px;
+          line-height: 44px;
         }
       }
 }
